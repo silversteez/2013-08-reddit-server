@@ -23,11 +23,11 @@ module.exports = function(app, config) {
   });
 
   // Auth
-  app.post('/api/login', function(req, res, next) {
+  app.post('/login', function(req, res, next) {
     // Implement login
   });
 
-  app.post('/api/signup', function(req, res, next) {
+  app.post('/signup', function(req, res, next) {
     // Implement signup
   });
 
