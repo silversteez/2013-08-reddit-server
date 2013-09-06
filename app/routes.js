@@ -15,7 +15,8 @@ module.exports = function(app, config) {
 
   // Setup API blockade
   app.all('/api/*', function(req, res, next) {
-    console.log('app', req);
+    // passport gives us a 'isAuthenticated' method
+    // we'll check this method
     if (req.isAuthenticated()) return next();
 
     return res.send(401, 'Unauthorized');
