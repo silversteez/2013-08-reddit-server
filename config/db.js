@@ -5,7 +5,8 @@ module.exports = function(app, config) {
   var db = mongoose.connect(config.db);
 
   var UserSchema = new Schema({
-    username: String
+    username: String,
+    password: String
   });
 
   mongoose.model('User', UserSchema);
